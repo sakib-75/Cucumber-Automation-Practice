@@ -33,4 +33,4 @@
 4. Set proper path of extent.reporter.spark.config file
 5. Add plugin in [CucumberTestRunner](https://github.com/sakib-75/Cucumber-Automation-Practice/blob/main/src/test/java/test_runner/CucumberTestRunner.java) </br>
    **`plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-   "timeline:test-output-thread/", "rerun:target/failedrerun.txt"}`**
+   "timeline:test-output-thread/", "rerun:target/failed_run.txt"}`**
