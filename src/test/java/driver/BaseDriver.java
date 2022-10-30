@@ -70,16 +70,15 @@ public class BaseDriver {
                 throw new RuntimeException(browser_name + " Browser Not Found!");
         }
 
-        PageDriver.getInstance().setDriver(driver);
-        driver = PageDriver.getCurrentDriver();
         driver.manage().window().maximize();
         driver.get(prop.getProperty("url"));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        PageDriver.getInstance().setDriver(driver);
 
     }
 
     public void quiteBrowser() {
-        driver.quit();
+        PageDriver.getCurrentDriver().quit();
     }
 
 }
